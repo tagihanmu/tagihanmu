@@ -1,66 +1,173 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tagihanmu.store</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 40px 20px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    p {
-      margin-top: 10px;
-      color: #ecf0f1;
-    }
-    .content {
-      padding: 30px 20px;
-    }
-    .btn {
-      background-color: #3498db;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background-color: #2980b9;
-    }
-    footer {
-      margin-top: 40px;
-      color: #7f8c8d;
-      font-size: 0.9em;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pemberitahuan Penting Tagihan Anda</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    color: #222;
+    margin: 0; padding: 20px;
+  }
+  .container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #d32f2f;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h2 {
+    color: #1976d2;
+    margin-top: 30px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin: 12px 0;
+  }
+  .warning {
+    background: #fdecea;
+    border-left: 5px solid #d32f2f;
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-weight: bold;
+    color: #b71c1c;
+  }
+  .contact {
+    background: #e3f2fd;
+    border-left: 5px solid #1976d2;
+    padding: 15px 20px;
+    margin-top: 30px;
+  }
+  .important-note {
+    background: #ffebee;
+    border: 2px solid #d32f2f;
+    color: #b71c1c;
+    font-weight: bold;
+    font-style: italic;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    animation: pulse 3s infinite;
+    user-select: text;
+  }
+  @keyframes pulse {
+    0%, 100% { background-color: #ffebee; }
+    50% { background-color: #ffcdd2; }
+  }
+  button {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #1976d2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #004ba0;
+  }
+  .hidden {
+    display: none;
+  }
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Tagihanmu.store</h1>
-    <p>Portal Cek Tagihan & Pengingat Pembayaran</p>
-  </header>
 
-  <div class="content">
-    <p>Silakan hubungi kami untuk informasi tagihan atau klarifikasi.</p>
-    <a href="mailto:cs@tagihanmu.store" class="btn">Hubungi Kami</a>
+<div class="container">
+  <h1>ANDA MASIH PUNYA KESEMPATAN HARI INI</h1>
+  <p>Jika Anda masih punya itikad baik, kami tawarkan 3 opsi penyelesaian yang hanya berlaku hari ini:</p>
+
+  <button id="toggleOptionsBtn">Tampilkan Opsi Penyelesaian</button>
+  <div id="options" class="hidden">
+    <h2>3 Opsi Penyelesaian:</h2>
+    <ul>
+      <li><strong>BAYAR LUNAS HUTANG POKOK HARI INI</strong><br>
+          Hutang Anda dianggap lunas 100%, data langsung diperbaiki hari ini, dan nama Anda dihapus dari pantauan kolektor.</li>
+      <li><strong>CICIL 2 KALI (BAYAR PERTAMA HARI INI)</strong><br>
+          Bayarkan setengah dari hutang pokok hari ini. Maka nama Anda langsung keluar dari pantauan kolektor, dan data akan diperbaiki setelah cicilan kedua diselesaikan.</li>
+      <li><strong>BAYAR SEBAGIAN SAJA HARI INI (NOMINAL BEBAS)</strong><br>
+          Bayarkan sebagian cicilan hari ini, lalu kirim bukti bayar ke admin. Data Anda akan dihapus dari pantauan kolektor, dan diperbaiki setelah pelunasan berikutnya selesai.</li>
+    </ul>
   </div>
 
-  <footer>
-    &copy; 2025 Tagihanmu.store – Semua hak dilindungi.
-  </footer>
+  <p class="important-note">
+    Semua dilakukan langsung di aplikasi atau transfer ke Virtual Account resmi yang terdaftar di sistem kami, tanpa pihak ke-3 atau rekening pribadi orang asing.
+  </p>
+
+  <div class="warning">
+    <p><strong>PERINGATAN TEGAS:</strong><br>
+    Jika dalam 3 hari sejak surat ini dikirim tidak ada pembayaran, maka:</p>
+    <ul>
+      <li>Akan dilakukan kunjungan langsung oleh tim lapangan kami ke alamat Anda.</li>
+      <li>Penagihan langsung oleh kolektor di manapun Anda berada.</li>
+      <li>Pelimpahan data ke pihak ketiga atau proses hukum sesuai aturan.</li>
+    </ul>
+  </div>
+
+  <p>Langkah yang sudah dan sedang dilakukan terhadap akun Anda:</p>
+  <ul>
+    <li>Penambahan denda harian</li>
+    <li>Pelaporan sebagai kredit macet ke SLIK OJK</li>
+    <li>Penurunan skor kredit yang memengaruhi akses Anda ke semua platform pinjaman digital</li>
+  </ul>
+
+  <p><strong>JANGAN ABAIKAN KESEMPATAN INI.</strong><br>
+  Segera bayar melalui aplikasi atau transfer ke:</p>
+
+  <p><strong>Virtual Account BCA Anda: <span id="bcaVa" style="color:#d32f2f; font-weight:bold;">{{BCA}}</span></strong></p>
+
+  <div class="contact">
+    <p>Lalu kirim bukti bayar ke WA <strong>085174088837 (Alex)</strong> atau balas email ini agar data Anda langsung ditandai dan diperbaiki.</p>
+    <p><strong>JANGAN TERUS MENGHINDAR. JANGAN SEPELEKAN SURAT INI.</strong></p>
+    <p>Kalau Anda tetap diam, Anda harus siap menerima semua konsekuensinya.</p>
+    <p>Terima kasih atas perhatian dan kerja samanya.<br>Hormat kami,<br><strong>Alex (085174088837)</strong></p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Semua hak cipta dilindungi
+</footer>
+
+<script>
+  const btn = document.getElementById('toggleOptionsBtn');
+  const options = document.getElementById('options');
+
+  btn.addEventListener('click', () => {
+    if (options.classList.contains('hidden')) {
+      options.classList.remove('hidden');
+      btn.textContent = 'Sembunyikan Opsi Penyelesaian';
+    } else {
+      options.classList.add('hidden');
+      btn.textContent = 'Tampilkan Opsi Penyelesaian';
+    }
+  });
+
+  // Ganti placeholder BCA Virtual Account dengan data asli
+  // document.getElementById('bcaVa').textContent = '1234567890';
+</script>
+
 </body>
 </html>
