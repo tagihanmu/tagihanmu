@@ -11,6 +11,18 @@
     color: #222;
     margin: 0; padding: 20px;
   }
+  header {
+    background: #d32f2f;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    user-select: none;
+  }
   .container {
     max-width: 700px;
     margin: 30px auto;
@@ -96,6 +108,10 @@
 </head>
 <body>
 
+<header>
+  PEMBERITAHUAN PENTING TAGIHAN ANDA
+</header>
+
 <div class="container">
   <h1>ANDA MASIH PUNYA KESEMPATAN HARI INI</h1>
   <p>Jika Anda masih punya itikad baik, kami tawarkan 3 opsi penyelesaian yang hanya berlaku hari ini:</p>
@@ -135,12 +151,10 @@
   </ul>
 
   <p><strong>JANGAN ABAIKAN KESEMPATAN INI.</strong><br>
-  Segera bayar melalui aplikasi atau transfer ke:</p>
-
-  <p><strong>Virtual Account BCA Anda: <span id="bcaVa" style="color:#d32f2f; font-weight:bold;">{{BCA}}</span></strong></p>
+  Segera bayar melalui aplikasi atau transfer ke Virtual Account resmi Anda.</p>
 
   <div class="contact">
-    <p>Lalu kirim bukti bayar ke WA <strong>085174088837 (Alex)</strong> atau balas email ini agar data Anda langsung ditandai dan diperbaiki.</p>
+    <p>Lalu kirim bukti bayar ke WA <strong>085174088837 (Alex)</strong> atau kirimkan email ke penagihankredivoteam@gmail.com agar data Anda langsung ditandai dan diperbaiki.</p>
     <p><strong>JANGAN TERUS MENGHINDAR. JANGAN SEPELEKAN SURAT INI.</strong></p>
     <p>Kalau Anda tetap diam, Anda harus siap menerima semua konsekuensinya.</p>
     <p>Terima kasih atas perhatian dan kerja samanya.<br>Hormat kami,<br><strong>Alex (085174088837)</strong></p>
@@ -164,9 +178,6 @@
       btn.textContent = 'Tampilkan Opsi Penyelesaian';
     }
   });
-
-  // Ganti placeholder BCA Virtual Account dengan data asli
-  // document.getElementById('bcaVa').textContent = '1234567890';
 </script>
 
 </body>
